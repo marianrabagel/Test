@@ -12,10 +12,11 @@ namespace AgileFreaks_test1
         {
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[array[i] % array.Length] > array.Length)
+                int elementIndex = array[i] % array.Length;
+                if (array[elementIndex] > array.Length)
                     return true;
                 else
-                    array[array[i] % array.Length] += array.Length;
+                    array[elementIndex] += array.Length;
             }
             return false;
         }
