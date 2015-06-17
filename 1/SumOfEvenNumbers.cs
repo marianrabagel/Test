@@ -17,6 +17,7 @@ namespace AgileFreaks_test1
 
         public int computeEvenNumbersSum(int[] array)
         {
+            s = 0;
             for (int i = 0; i < array.Length; i++)
                 if (isEven(array[i]))
                     addToSum(array[i]);
@@ -24,9 +25,8 @@ namespace AgileFreaks_test1
         }
         private bool isEven(int number)
         {
-            if(number % 2 == 0)
-                return true;
-            return false;
+            return number % 2 == 0;
+                
         }
         private void addToSum(int number)
         {
