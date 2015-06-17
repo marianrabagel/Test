@@ -12,7 +12,7 @@ namespace AgileFreaks_test1
         public LargestTwoNumbers(){
             max = secondMax = int.MinValue;
         }
-        public int getMax() { return max; }
+        public int getMax() { return max;} 
         public int getSecondMax() { return secondMax; }
         public void setMaxAndSecondMax(int[] array)
         {
@@ -25,13 +25,12 @@ namespace AgileFreaks_test1
                 checkMaxAndSecondMaxEquality();
             }
         }
-
         private void checkMaxAndSecondMaxEquality()
         {
-            if (areEqual())
+            if (isMaxAndSecondMaxEqual())
                 secondMax = int.MinValue;
         }
-        private bool areEqual()
+        private bool isMaxAndSecondMaxEqual()
         {
             return secondMax == max;
         }
@@ -59,7 +58,6 @@ namespace AgileFreaks_test1
                 secondMax = firstElement;
             }
         }
-
         private static bool isFirstGreater(int firstElement, int secondElement)
         {
             return firstElement > secondElement;
@@ -76,9 +74,6 @@ namespace AgileFreaks_test1
         {
             return number > max;
         }
-        private bool isNull(int[] array)
-        {
-            return array == null;
-        }
+     
     }
 }
